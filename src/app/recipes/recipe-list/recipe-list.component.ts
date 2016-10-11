@@ -7,8 +7,11 @@ import { Recipe } from '../recipe';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Recipe[] = [];
-  recipe = new Recipe('Dummy', 'Dummy', 'http://previewcf.turbosquid.com/Preview/2014/05/21__03_48_03/dummy_1.jpg73a34682-6a0e-42f8-bbeb-b21eaa495913Original.jpg');
+  recipes: Recipe[] = [
+    new Recipe('Diavora', 'When you need a delish snack!', 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQZIYR2xtyZ0oLbVvUaLRshEBLcjnDUb9aiDWRIPttFKAnCLLBs', []),
+    new Recipe('Tisasvoa', 'A great Russian delicacy!', 'http://desiappetite.com/recipeAdmin/assets/images/thumbnails/6285209385-food.jpg', [])
+  ];
+
   @Output() recipeSelected = new EventEmitter<Recipe>();
   constructor() { }
 
