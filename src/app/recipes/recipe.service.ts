@@ -18,8 +18,8 @@ export class RecipeService {
 
   constructor() { }
 
-  getRecipes() {
-    return this.getRecipes;
+  getRecipes(id: number) {
+    return this.recipes[id];
   }
 
 }
